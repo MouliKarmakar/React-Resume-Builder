@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <div className="navbar">
-      <a to="\">
+      <Link to="/home">
         <section className="navbar__logo">
           <img
             src="https://www.codester.com/static/uploads/items/000/041/41164/icon.png"
@@ -12,20 +12,20 @@ export default function Navbar() {
           />
           <span>ResumeForge</span>
         </section>
-      </a>
+      </Link>
       <section className="navbar__links">
-        <a to="\">
+        <Link to="/templates">
           {" "}
           <span>Choose Templates</span>{" "}
-        </a>
-        <a to="\">
+        </Link>
+        <Link to="/">
           {" "}
           <span>My Resumes</span>{" "}
-        </a>
-        <a to="\">
+        </Link>
+        <Link to="/about">
           {" "}
           <span>About Us</span>{" "}
-        </a>
+        </Link>
       </section>
     </div>
   );

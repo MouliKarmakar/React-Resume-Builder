@@ -2,10 +2,17 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  font-family: sans-serif;
 }
 .App_container {
   background-color: #2272b0;
   height: fit-content;
   min-height: 100vh;
   padding-bottom: 40px;
+  &__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 }
