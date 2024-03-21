@@ -1,6 +1,8 @@
 .wellcome-component {
   display: flex;
   flex-direction: column;
+  background-color: aqua;
+  width: 100%;
   &__firstSection {
     display: flex;
     justify-content: center;

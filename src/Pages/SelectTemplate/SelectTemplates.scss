@@ -1,0 +1,36 @@
+.select_templates {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  &__template {
+    width: 200px;
+    position: relative;
+    height: fit-content;
+    border: 1px solid grey;
+    border-radius: 4px;
+    background-color: #fff;
+    padding: 5px;
+
+    img {
+      width: 100%;
+      overflow: hidden;
+    }
+    &__button {
+      position: absolute;
+      top: 40%;
+      left: 10%;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      background-color: #007bff;
+      color: #ffffff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  }
+  .active {
+    outline: 5px solid rgb(69, 69, 231);
+  }
+}

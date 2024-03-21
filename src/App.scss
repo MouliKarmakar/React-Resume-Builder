@@ -5,14 +5,16 @@
   font-family: sans-serif;
 }
 .App_container {
-  background-color: #2272b0;
+  background-color: #d7d5da;
   height: fit-content;
   min-height: 100vh;
   padding-bottom: 40px;
   &__content {
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
   }
 }
