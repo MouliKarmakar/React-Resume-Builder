@@ -1,11 +1,10 @@
 import React from "react";
 import "./SelectTemplates.scss";
 import { Link } from "react-router-dom";
-
+import { ResumeTemplates } from "../../Constant/ResumeTemplates";
 export default function SelectTemplateComponent({
   setSelectedTemplate,
   selectedTemplate,
-  ResumeTemplates,
 }) {
   return (
     <div className="select_templates">

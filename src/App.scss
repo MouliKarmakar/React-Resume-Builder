@@ -5,12 +5,13 @@
   font-family: sans-serif;
 }
 .App_container {
-  background-color: #d7d5da;
+  background-color: rgba(168, 189, 233, 0.03);
   height: fit-content;
   min-height: 100vh;
   padding-bottom: 40px;
   &__content {
     margin-top: 40px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

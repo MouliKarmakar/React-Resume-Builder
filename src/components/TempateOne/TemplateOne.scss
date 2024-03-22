@@ -1,6 +1,16 @@
 .template_one {
-  width: 100%;
+  width: 50%;
+  min-height: 120px;
   height: fit-content;
-  background-color: #fff;
+  // background-color: #d68b8b;
   color: #000;
+  border: 1px solid gray;
+  border-radius: 2px;
+  &__page {
+    display: flex;
+    background-color: #e4e4e4;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
 }
