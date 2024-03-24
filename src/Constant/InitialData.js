@@ -6,10 +6,11 @@ export const Initialdata = {
     city: "New York",
     country: "USA",
     pin_code: "10001",
+    job_position: "Software Engineer",
   },
   reume_summary:
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolorum aliquam eum? Nihil excepturi fugit quae! Veritatis soluta error sit ad nemo laboriosam nisi ducimus dignissimos, incidunt provident ullam, voluptates at dolores porro. Quod nulla nostrum ea molestias repellat minus. Nesciunt sapiente impedit quo nostrum esse at qui aliquam tempore eveniet quas. Sint enim, distinctio voluptatibus asperiores dolorem doloribus culpa!",
-  workExperience: [
+    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolorum aliquam eum? Nihil excepturi fugit quae! Veritatis soluta error sit ad nemo laboriosam nisi ducimus dignissimos, incidunt provident ullam, voluptates at dolores porro. Quod nulla nostrum ea molestias repellat minus.",
+  work_experience: [
     {
       company: "Company Name",
       role: "Your Role in the Company",
@@ -35,4 +36,13 @@ export const Initialdata = {
   ],
   certifications: [],
   social_links: [],
+  projects: [
+    {
+      project_name: "Project Title",
+      description: "This is a brief description of your project.",
+      technologies_used: "",
+      live_demo: "",
+      source_code: "",
+    },
+  ],
 };

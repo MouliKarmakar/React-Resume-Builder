@@ -1,5 +1,5 @@
 .template_one {
-  width: 50%;
+  width: 80%;
   min-height: 120px;
   height: fit-content;
   // background-color: #d68b8b;
@@ -8,9 +8,76 @@
   border-radius: 2px;
   &__page {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     background-color: #e4e4e4;
     width: 100%;
-    padding: 20px;
+    padding: 25px 20px;
     box-sizing: border-box;
+
+    &__header {
+      display: flex;
+      width: 100%;
+      &__part_1 {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        text-align: left;
+        width: 80%;
+        &__name {
+          font-weight: 700;
+          font-size: 27px;
+          line-height: 21px;
+          letter-spacing: 2px;
+        }
+        &__role {
+          letter-spacing: 2px;
+          font-weight: 400;
+        }
+      }
+      &__part_2 {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 5px;
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+    &__body {
+      display: flex;
+      gap: 20px;
+      &__sec_1 {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+        &__parts {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+      &__sec_2 {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        gap: 20px;
+        text-align: left;
+      }
+    }
+  }
+  .heading_text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 2px;
+  }
+  .content_text {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 300;
   }
 }
