@@ -13,7 +13,8 @@ export const Initialdata = {
   work_experience: [
     {
       company: "Company Name",
-      role: "Your Role in the Company",
+      role_summary:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni dolorum aliquam eum? Nihil excepturi fugit quae! Veritatis soluta error sit ad nemo laboriosam nisi ducimus dignissimos,",
       startYear: "Start Year",
       endYear: "End Year (if present)",
       still_working_here: false,
@@ -34,13 +35,12 @@ export const Initialdata = {
       level: "Level", // Proficient, Fluent, Good, Average, Poor, Basic
     },
   ],
-  certifications: [],
-  social_links: [],
+  certifications: ["extra_achivement"],
+  social_links: ["linkin_link", "github_link"],
   projects: [
     {
       project_name: "Project Title",
       description: "This is a brief description of your project.",
-      technologies_used: "",
       live_demo: "",
       source_code: "",
     },

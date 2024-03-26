@@ -10,12 +10,24 @@
   min-height: 100vh;
   padding-bottom: 40px;
   &__content {
-    margin-top: 40px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
+  }
+}
+.form_item {
+  .ant-form-item {
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .ant-form-item-label {
+    padding: 0; /* Remove padding around label */
+  }
+
+  .ant-form-item-control {
+    line-height: 1; /* Adjust line height for better spacing */
   }
 }

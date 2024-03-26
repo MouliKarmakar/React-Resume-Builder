@@ -1,9 +1,16 @@
 import React from "react";
 import "./TemplateOne.scss";
-import { Initialdata } from "../../Constant/InitialData";
+// import { formData } from "../../Constant/formData";
 import { Document, Page, Text, View } from "@react-pdf/renderer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faPhone,
+  faEnvelope,
+  faLocationDot,
+} from "@fortawesome/free-solid-svg-icons";
+import { Divider } from "antd";
 
-export default function TemplatesOneComponent() {
+export default function TemplatesOneComponent({ formData }) {
   return (
     <div className="template_one">
       <Document>
@@ -11,57 +18,132 @@ export default function TemplatesOneComponent() {
           <View className="template_one__page__header">
             <View className="template_one__page__header__part_1">
               <Text className="template_one__page__header__part_1__name">
-                {Initialdata.heading.full_name}
+                {formData.heading.full_name && formData.heading.full_name}
               </Text>
               <Text className="template_one__page__header__part_1__role">
-                {Initialdata.heading.job_position}
+                {formData.heading.job_position && formData.heading.job_position}
               </Text>
             </View>
             <View className="template_one__page__header__part_2">
               <Text className="template_one__page__header__part_2__phone">
-                {Initialdata.heading.phone}
+                <FontAwesomeIcon icon={faPhone} style={{ padding: "0 5px" }} />
+                {formData.heading.phone}
               </Text>
               <Text className="template_one__page__header__part_2__email">
-                {Initialdata.heading.email}
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  style={{ padding: "0 5px" }}
+                />
+                {formData.heading.email}
               </Text>
               <Text className="template_one__page__header__part_2__address">
-                {`${Initialdata.heading.city}, ${Initialdata.heading.country} ${Initialdata.heading.pin_code}`}
+                <FontAwesomeIcon
+                  icon={faLocationDot}
+                  style={{ padding: "0 5px" }}
+                />
+                {`${formData.heading.city}, ${formData.heading.country} ${formData.heading.pin_code}`}
               </Text>
             </View>
           </View>
           <View className="template_one__page__body">
             <View className="template_one__page__body__sec_1">
               <View className="template_one__page__body__sec_1__parts">
-                <Text className="heading_text">Education</Text>
-                {Initialdata.education.map((edu, index) => (
-                  <View key={index} className="content_text">
-                    <Text>{edu.degree}</Text>
-                    <Text>{edu.school_college}</Text>
-                    <Text>{`${edu.startYear} to ${edu.endYear}`}</Text>
-                  </View>
-                ))}
+                <Text className="body_heading">Education</Text>
+                {formData.education &&
+                  formData.education.map((edu, index) => (
+                    <View key={index} className="description_text">
+                      <Text>• {edu.degree}</Text>
+                      <Text>{edu.school_college}</Text>
+                      <Text>{`${edu.startYear} to ${edu.endYear}`}</Text>
+                    </View>
+                  ))}
               </View>
               <View className="template_one__page__body__sec_1__parts">
-                <Text className="heading_text">Skills</Text>
-                {Initialdata.skills.map((skill, index) => (
-                  <Text key={index} className="content_text">
-                    {`• ${skill}`}
-                  </Text>
-                ))}
+                <Text className="body_heading">Skills</Text>
+                {formData.skills &&
+                  formData.skills.map((skill, index) => (
+                    <Text key={index} className="description_text">
+                      {`• ${skill}`}
+                    </Text>
+                  ))}
               </View>
               <View className="template_one__page__body__sec_1__parts">
-                <Text className="heading_text">Languages</Text>
-                {Initialdata.languages.map((language, index) => (
-                  <Text key={index} className="content_text">
-                    {`• ${language.language} level-${language.level}`}
-                  </Text>
-                ))}
+                <Text className="body_heading">Languages</Text>
+                {formData.languages &&
+                  formData.languages.map((language, index) => (
+                    <Text key={index} className="description_text">
+                      {`• ${language.language} level-${language.level}`}
+                    </Text>
+                  ))}
+              </View>
+              <View className="template_one__page__body__sec_1__parts">
+                <Text className="body_heading">Achivements</Text>
+                {formData.certifications &&
+                  formData.certifications.map((certify, index) => (
+                    <Text key={index} className="description_text">
+                      • {certify}
+                    </Text>
+                  ))}
               </View>
             </View>
+            <Divider
+              type="vertical"
+              style={{ height: "100%", backgroundColor: "#000" }}
+            />
             <View className="template_one__page__body__sec_2">
-              <View className="template_one__page__body__sec_2__summary"></View>
-              <View className="template_one__page__body__sec_2__experience"></View>
-              <View className="template_one__page__body__sec_2__projects"></View>
+              <View className="template_one__page__body__sec_2__summary">
+                <Text className="body_heading">Objective</Text>
+                <Text className="description_text">
+                  {formData.reume_summary}
+                </Text>
+              </View>
+              <View className="template_one__page__body__sec_2__experience">
+                <Text className="body_heading">Experience</Text>
+                {formData.work_experience &&
+                  formData.work_experience.map((exp, index) => (
+                    <View key={index} className="description_text">
+                      <Text
+                        style={{
+                          fontWeight: 550,
+                          fontSize: 13,
+                          letterSpacing: 2,
+                        }}
+                      >
+                        • {exp.company}
+                      </Text>
+                      <Text>{exp.role_summary}</Text>
+                      <Text>
+                        {exp.startYear}
+                        {exp.still_working_here === false &&
+                          ` to ${exp.endYear}`}
+                      </Text>
+                    </View>
+                  ))}
+              </View>
+              <View className="template_one__page__body__sec_2__projects">
+                <Text className="body_heading">Projects</Text>
+                {formData.projects &&
+                  formData.projects.map((project, index) => (
+                    <View className="description_text">
+                      <Text
+                        style={{
+                          fontWeight: 550,
+                          fontSize: 13,
+                          letterSpacing: 2,
+                        }}
+                      >
+                        • {project.project_name}
+                      </Text>
+                      <Text>{project.description}</Text>
+                      {project.live_demo !== "" && (
+                        <Text>Live_demo_link- {project.live_demo}</Text>
+                      )}
+                      {project.source_code !== "" && (
+                        <Text>Source_code_link- {project.source_code}</Text>
+                      )}
+                    </View>
+                  ))}
+              </View>
             </View>
           </View>
         </Page>

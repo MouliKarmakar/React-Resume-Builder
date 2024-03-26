@@ -4,7 +4,7 @@ import Navbar from "./components/navbar/NavbarComponent";
 import WellcomeComponent from "./Pages/LandingPage/WellcomeComponent";
 import SelectTemplateComponent from "./Pages/SelectTemplate/SelectTemplate";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import TemplatesOneComponent from "./components/TempateOne/TemplateOne";
+import FormPageComponent from "./Pages/FormPage/FormPage";
 
 export default function App() {
   const [selectedTemplate, setSelectedTemplate] = useState(null);
@@ -25,7 +25,7 @@ export default function App() {
                 />
               }
             />
-            <Route path="/steps" element={<TemplatesOneComponent />} />
+            <Route path="/steps" element={<FormPageComponent />} />
             <Route path="/about" element={<WellcomeComponent />} />
           </Routes>
         </div>
