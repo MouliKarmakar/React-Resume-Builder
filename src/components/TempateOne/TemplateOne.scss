@@ -95,3 +95,8 @@
     letter-spacing: 2px;
   }
 }
+.tamplate_saveButton {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
