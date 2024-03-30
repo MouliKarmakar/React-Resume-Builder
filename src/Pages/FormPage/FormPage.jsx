@@ -6,16 +6,16 @@ import HeadingFormComponent from "../../components/HeadingForm/HeadingForm";
 import TemplatesOneComponent from "../../components/TempateOne/TemplateOne";
 import EducationForm from "../../components/Education/Education";
 import SummaryForm from "../../components/SummaryForm/Summary";
-import { hasFormSubmit } from "@testing-library/user-event/dist/utils";
 import ExperienceForm from "../../components/Experience/Experience";
 import ProjectFormComponent from "../../components/Projects/ProjectForm";
+import TemplatesTwoComponent from "../../components/TemplateTwo/TemplateTwo";
 
-export default function FormPageComponent() {
+export default function FormPageComponent({ selectedTemplate }) {
   const [formData, setFormData] = useState(Initialdata);
   const [current, setCurrent] = useState(1);
-  const [check, setCheck] = useState(
-    Initialdata.work_experience.still_working_here
-  );
+
+  const check = Initialdata.work_experience.still_working_here;
+
   const handleNextClick = () => {
     setCurrent((curr) => curr + 1);
   };
@@ -45,7 +45,12 @@ export default function FormPageComponent() {
           />
         )}
         {current === 5 && <ProjectFormComponent onFinish={handleFormSubmit} />}
-        <TemplatesOneComponent formData={formData} current={current} />
+
+        {selectedTemplate === 1 ? (
+          <TemplatesOneComponent formData={formData} current={current} />
+        ) : (
+          <TemplatesTwoComponent formData={formData} current={current} />
+        )}
       </div>
     </div>
   );

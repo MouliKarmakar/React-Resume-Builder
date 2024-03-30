@@ -100,3 +100,8 @@
   flex-direction: column;
   gap: 24px;
 }
+@media only screen and (max-width: 518px) {
+  .template_one {
+    width: 300px;
+  }
+}

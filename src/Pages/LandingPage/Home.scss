@@ -1,0 +1,64 @@
+.home_component {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 24px 120px;
+  gap: 30px;
+  color: rgb(19, 19, 71);
+  letter-spacing: 2px;
+  &__imgBox {
+    position: relative;
+    width: 50%;
+    &__resumeModel {
+      width: 300px;
+      height: 350px;
+      position: absolute;
+      top: 15%;
+      left: 10%;
+    }
+  }
+  &__bannerBox {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 40px 20px;
+    &__subHeading {
+      font-size: 24px;
+      line-height: 36px;
+      font-weight: 500;
+    }
+    &__descriptionBox {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 12px;
+      background-color: rgb(201, 247, 188);
+      border-radius: 4px;
+      gap: 8px;
+      margin-top: 20px;
+      &__description {
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+    &__connectUs {
+      display: flex;
+      gap: 12px;
+      padding: 8px 12px;
+      justify-content: center;
+      background-color: rgb(241, 179, 189);
+      border-radius: 4px;
+    }
+  }
+}
+
+@media only screen and (max-width: 920px) {
+  .home_component {
+    flex-wrap: wrap;
+    padding: 24px 40px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+}

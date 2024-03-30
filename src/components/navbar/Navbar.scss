@@ -42,4 +42,19 @@
       color: rgb(98, 48, 237);
     }
   }
+  &__toggle {
+    display: none;
+    cursor: pointer;
+    position: inherit;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .navbar {
+    &__toggle {
+      display: block;
+    }
+    &__links {
+      display: none;
+    }
+  }
 }

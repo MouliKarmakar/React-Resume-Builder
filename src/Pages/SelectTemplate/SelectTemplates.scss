@@ -1,12 +1,16 @@
 .select_templates {
+  margin-top: 24px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 30px;
   &__template {
-    width: 200px;
+    width: 180px;
     position: relative;
-    height: fit-content;
+    height: 250px;
+    align-items: center;
+    box-sizing: border-box;
     border: 1px solid grey;
     border-radius: 4px;
     background-color: #fff;
@@ -18,9 +22,9 @@
     }
     &__button {
       position: absolute;
-      top: 40%;
-      left: 10%;
-      padding: 10px 20px;
+      top: 35%;
+      left: 5%;
+      padding: 8px 12px;
       font-size: 14px;
       font-weight: 500;
       background-color: #007bff;

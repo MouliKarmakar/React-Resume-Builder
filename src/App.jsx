@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.scss";
 import Navbar from "./components/navbar/NavbarComponent";
-import WellcomeComponent from "./Pages/LandingPage/WellcomeComponent";
 import SelectTemplateComponent from "./Pages/SelectTemplate/SelectTemplate";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FormPageComponent from "./Pages/FormPage/FormPage";
+import HomeComponent from "./Pages/LandingPage/Home";
 
 export default function App() {
   const [selectedTemplate, setSelectedTemplate] = useState(null);
@@ -14,7 +14,7 @@ export default function App() {
         <Navbar />
         <div className="App_container__content">
           <Routes>
-            <Route path="/" element={<WellcomeComponent />} />
+            <Route path="/" element={<HomeComponent />} />
             <Route
               path="/templates"
               element={
@@ -25,8 +25,13 @@ export default function App() {
                 />
               }
             />
-            <Route path="/steps" element={<FormPageComponent />} />
-            <Route path="/about" element={<WellcomeComponent />} />
+            <Route
+              path="/steps"
+              element={
+                <FormPageComponent selectedTemplate={selectedTemplate} />
+              }
+            />
+            <Route path="/about" element={<HomeComponent />} />
           </Routes>
         </div>
       </div>
