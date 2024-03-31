@@ -1,28 +1,17 @@
 import React, { useState } from "react";
 import "./Navbar.scss";
 import HorizontalSplitIcon from "@mui/icons-material/HorizontalSplit";
-// import BackspaceIcon from "@mui/icons-material/Backspace";
-import { Dropdown } from "antd";
+import BackspaceIcon from "@mui/icons-material/Backspace";
 import { Link } from "react-router-dom";
 export default function Navbar() {
-  const [toggle, setToggle] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
   const handleToggle = () => {
-    setToggle(!toggle);
+    setIsActive(!isActive);
   };
-  const menuItems = [
-    {
-      id: "1",
-      label: <Link to="/templates">Choose Templates</Link>,
-    },
-    {
-      id: "2",
-      label: <Link to="/about">About Us</Link>,
-    },
-  ];
   return (
     <>
-      <div className="navbar">
+      <div className={`navbar ${isActive ? "active" : ""}`}>
         <Link to="/">
           <section className="navbar__logo">
             <img
@@ -42,6 +31,9 @@ export default function Navbar() {
             <span>About Us</span>{" "}
           </Link>
         </section>
+        <div className="navbar__toggle" onClick={handleToggle}>
+          {!isActive ? <HorizontalSplitIcon /> : <BackspaceIcon />}
+        </div>
       </div>
     </>
   );

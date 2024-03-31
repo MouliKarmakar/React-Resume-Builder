@@ -26,7 +26,7 @@ export default function TemplatesOneComponent({ formData, current }) {
   };
   return (
     <div className="tamplate_saveButton">
-      <span>See the preview and save as PDF</span>
+      {current === 6 && <span>See the preview and save as PDF</span>}
       <div className="template_one">
         <Document>
           <Page size="A4" className="template_one__page">
