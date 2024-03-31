@@ -12,7 +12,7 @@ export default function SubNavComponent({
         {current >= 2 && (
           <ButtonSecondary text="Back" onClick={handleBackClick} />
         )}
-        {current <= 6 && (
+        {current <= 5 && (
           <ButtonPrimary text="Next" onClick={handleNextClick} />
         )}
       </div>

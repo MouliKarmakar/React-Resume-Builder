@@ -21,6 +21,9 @@ export default function SummaryForm({ onFinish }) {
         </Form.Item>
         <ButtonPrimary text="See Preview" onClick={handleSubmit} />
       </Form>
+      <span>
+        You must click to see Preview to add your ditails within the resume
+      </span>
     </div>
   );
 }

@@ -14,6 +14,10 @@ export default function ProjectFormComponent({ onFinish }) {
   return (
     <div className="project-form">
       <h2>Add Your Projects</h2>
+      <span>
+        This field is not necessary for all the templates available here if this
+        field is not present in the template please skip this filed
+      </span>
       <Form
         form={form}
         name="projectsForm"
@@ -94,6 +98,9 @@ export default function ProjectFormComponent({ onFinish }) {
         </Form.List>
         <ButtonPrimary text="See Preview" onClick={handleSubmit} />
       </Form>
+      <span>
+        You must click to see Preview to add your ditails within the resume
+      </span>
     </div>
   );
 }

@@ -120,6 +120,9 @@ export default function HeadingFormComponent({ onFinish }) {
         </div>
         <ButtonPrimary text="See preview" onClick={handleSubmit} />
       </Form>
+      <span>
+        You must click to see Preview to add your ditails within the resume
+      </span>
     </div>
   );
 }

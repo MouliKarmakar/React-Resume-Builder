@@ -28,7 +28,14 @@ export const Initialdata = {
       endYear: "YYYY",
     },
   ],
-  skills: ["Passionate", "Good Communicator", "Problem Solver"],
+  skills: [
+    "Passionate",
+    "Good Communicator",
+    "Problem Solver",
+    "Leadership",
+    "Adaptability/Flexibility",
+    "Teamwork",
+  ],
   languages: [
     {
       language: "Language",

@@ -5,6 +5,7 @@ import SelectTemplateComponent from "./Pages/SelectTemplate/SelectTemplate";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import FormPageComponent from "./Pages/FormPage/FormPage";
 import HomeComponent from "./Pages/LandingPage/Home";
+import About from "./Pages/AboutPage/About";
 
 export default function App() {
   const [selectedTemplate, setSelectedTemplate] = useState(null);
@@ -31,7 +32,7 @@ export default function App() {
                 <FormPageComponent selectedTemplate={selectedTemplate} />
               }
             />
-            <Route path="/about" element={<HomeComponent />} />
+            <Route path="/about" element={<About />} />
           </Routes>
         </div>
       </div>

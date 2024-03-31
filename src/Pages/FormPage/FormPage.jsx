@@ -9,6 +9,7 @@ import SummaryForm from "../../components/SummaryForm/Summary";
 import ExperienceForm from "../../components/Experience/Experience";
 import ProjectFormComponent from "../../components/Projects/ProjectForm";
 import TemplatesTwoComponent from "../../components/TemplateTwo/TemplateTwo";
+import SkillsLanguage from "../../components/Skills_LanguageForm/Skills_Language";
 
 export default function FormPageComponent({ selectedTemplate }) {
   const [formData, setFormData] = useState(Initialdata);

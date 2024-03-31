@@ -5,7 +5,8 @@ export const ResumeTemplates = [
   },
   {
     id: 2,
-    link: "https://cdn.enhancv.com/polished_resume_template_1_6697880370.png",
+    link: "https://buildfreeresume.com/wp-content/uploads/2023/05/r7-min_75-1.png",
   },
 ];
 // https://www.myperfectresume.com/wp-content/uploads/2022/07/resume-template-original.svg
+// https://buildfreeresume.com/wp-content/uploads/2023/05/r7-min_75-1.png

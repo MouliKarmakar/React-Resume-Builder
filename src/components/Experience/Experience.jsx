@@ -123,6 +123,9 @@ export default function ExperienceForm({ onFinish, stillWorkingHere }) {
         </Form.List>
         <ButtonPrimary text="See Preview" onClick={handleSubmit} />
       </Form>
+      <span>
+        You must click to see Preview to add your ditails within the resume
+      </span>
     </div>
   );
 }

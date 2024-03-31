@@ -26,6 +26,7 @@ export default function TemplatesOneComponent({ formData, current }) {
   };
   return (
     <div className="tamplate_saveButton">
+      <span>See the preview and save as PDF</span>
       <div className="template_one">
         <Document>
           <Page size="A4" className="template_one__page">
@@ -82,24 +83,6 @@ export default function TemplatesOneComponent({ formData, current }) {
                     formData.skills.map((skill, index) => (
                       <Text key={index} className="description_text">
                         {`• ${skill}`}
-                      </Text>
-                    ))}
-                </View>
-                <View className="template_one__page__body__sec_1__parts">
-                  <Text className="body_heading">Languages</Text>
-                  {formData.languages &&
-                    formData.languages.map((language, index) => (
-                      <Text key={index} className="description_text">
-                        {`• ${language.language} level-${language.level}`}
-                      </Text>
-                    ))}
-                </View>
-                <View className="template_one__page__body__sec_1__parts">
-                  <Text className="body_heading">Achivements</Text>
-                  {formData.certifications &&
-                    formData.certifications.map((certify, index) => (
-                      <Text key={index} className="description_text">
-                        • {certify}
                       </Text>
                     ))}
                 </View>
