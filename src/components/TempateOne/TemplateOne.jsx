@@ -86,6 +86,16 @@ export default function TemplatesOneComponent({ formData, current }) {
                       </Text>
                     ))}
                 </View>
+                {/* <View className="template_one__page__body__sec_1__parts">
+                  <Text className="body_heading">Language</Text>
+                  {formData.languages &&
+                    formData.languages.map((e, index) => {
+                      console.log(e);
+                      <Text key={index} className="description_text">
+                        {`• ${e.language}-${e.level}`}
+                      </Text>;
+                    })}
+                </View> */}
               </View>
               <div
                 style={{

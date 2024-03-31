@@ -14,7 +14,6 @@ import TemplatesTwoComponent from "../../components/TemplateTwo/TemplateTwo";
 export default function FormPageComponent({ selectedTemplate }) {
   const [formData, setFormData] = useState(Initialdata);
   const [current, setCurrent] = useState(1);
-
   const check = Initialdata.work_experience.still_working_here;
 
   const handleNextClick = () => {
@@ -46,6 +45,7 @@ export default function FormPageComponent({ selectedTemplate }) {
           />
         )}
         {current === 5 && <ProjectFormComponent onFinish={handleFormSubmit} />}
+        {/* {current === 6 && <SkillsLanguage onFinish={handleFormSubmit} />} */}
 
         {selectedTemplate === 1 ? (
           <TemplatesOneComponent formData={formData} current={current} />
